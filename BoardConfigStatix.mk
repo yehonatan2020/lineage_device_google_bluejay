@@ -3,10 +3,17 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+# FOD animations
+EXTRA_UDFPS_ANIMATIONS := true
 
+# Enable ThinLTO Source wide 
+GLOBAL_THINLTO := true
+USE_THINLTO_CACHE := true
+SKIP_ABI_CHECKS := true
 BUILD_BROKEN_DUP_RULES := true
 
 # Kernel
+TARGET_BOARD_KERNEL_HEADERS := device/google/kernel-headers
 TARGET_KERNEL_DTBO_PREFIX := dts/
 TARGET_KERNEL_DTBO := google/devices/bluejay/dtbo.img
 TARGET_KERNEL_DTB := \
